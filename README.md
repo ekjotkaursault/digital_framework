@@ -50,8 +50,11 @@ README.md     → Project documentation
 
 --------About the Developer-----
 
-Ekjot Kaur
+**Ekjot Kaur**
+
 Computer Programming Student | Sault College, Toronto Campus
+
 GitHub: https://github.com/ekjotkaursault
+
 
 

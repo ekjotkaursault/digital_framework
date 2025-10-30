@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Picture Frame</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #222;
+      font-weight: 600;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .frame {
+      border: 10px solid #4A90E2;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      background-color: white;
+      width: 90%;
+      max-width: 600px;
+      aspect-ratio: 3 / 2; /* Ensures consistent ratio */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .buttons button {
+      background-color: #4A90E2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .buttons button:hover {
+      background-color: #3b7dc4;
+      transform: translateY(-2px);
+    }
+
+    .buttons button:active {
+      transform: scale(0.97);
+    }
+
+    /* ✅ Responsive Buttons */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .buttons button {
+        width: 100px;
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Digital Picture Frame</h1>
+
+  <div class="frame">
+    <img id="displayedImage" src="" alt="Slideshow Image">
+  </div>
+
+  <div class="buttons">
+    <button onclick="pauseSlideshow()">Pause</button>
+    <button onclick="resumeSlideshow()">Resume</button>
+  </div>
+
+  <script>
+    const imageUrls = [
+      "https://ekjot-lab3-assets.s3.ca-central-1.amazonaws.com/snow.jpg",
+      "https://ekjot-lab3-assets.s3.ca-central-1.amazonaws.com/foreign.jpg",
+      "https://ekjot-lab3-assets.s3.ca-central-1.amazonaws.com/man.jpg",
+      "https://ekjot-lab3-assets.s3.ca-central-1.amazonaws.com/table_chair.jpg"
+    ];
+
+    let currentIndex = 0;
+    let slideshowInterval;
+    const displayedImage = document.getElementById("displayedImage");
+
+    function showImage(index) {
+      displayedImage.src = imageUrls[index];
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % imageUrls.length;
+      showImage(currentIndex);
+    }
+
+    function startSlideshow() {
+      slideshowInterval = setInterval(nextImage, 5000);
+    }
+
+    function pauseSlideshow() {
+      clearInterval(slideshowInterval);
+    }
+
+    function resumeSlideshow() {
+      pauseSlideshow();
+      startSlideshow();
+    }
+
+    // Initial load
+    showImage(currentIndex);
+    startSlideshow();
+  </script>
+
+</body>
+</html>

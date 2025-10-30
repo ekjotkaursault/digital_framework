@@ -4,6 +4,53 @@
 
 This is fully responsive web page with pause and resume buttons and 4 images that are being displayed on a rotating cycle and changes after 10 seconds, which works very smoothly.
 
+------------------------------------------
+
+**Code Attribution**
+This project was designed and developed by me (Ekjot Kaur) as part of my exploration of Flutter’s web development capabilities.
+While the overall structure, logic, and design are original, I referenced a few official and educational resources to understand:
+
+Timer-based image rotation in Flutter
+
+Handling state in StatefulWidget
+
+Connecting AWS S3 images
+
+Responsive layout techniques in Flutter
+
+**External Resources Used** that were used for my learning:
+Flutter Image Widget Documentation
+Helped me display online images using Image.network() from AWS S3.
+
+Flutter Timer Class
+Guided the implementation of automatic image transitions every 10 seconds using Timer.periodic().
+
+Flutter Layout and Responsiveness Guides
+Provided best practices for building responsive UI using MediaQuery, Expanded, and Flexible widgets.
+
+AWS S3 Documentation
+Used to upload images to the cloud and retrieve their public URLs.
+
+Flutter Web Deployment Guide
+Helped me deploy the project to GitHub Pages after building it for web.
+
+**My Original Work Includes:**
+
+1. App concept, design, and structure
+
+2. Integration of AWS S3 images into the Flutter app
+
+3. Timer logic for 10-second image transitions
+
+4. Pause and Resume button logic
+
+5. Custom responsive layout for web and mobile
+
+6. GitHub Pages deployment setup
+
+7. Full documentation including README, folder structure, and run instructions
+
+
 # Digital Framework
 
 A **Flutter-based digital picture frame** application that displays images (stored in AWS Cloud Storage) on a rotating cycle.  
@@ -55,6 +102,7 @@ README.md     → Project documentation
 Computer Programming Student | Sault College, Toronto Campus
 
 GitHub: https://github.com/ekjotkaursault
+
 
 
 

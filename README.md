@@ -18,7 +18,11 @@ Connecting AWS S3 images
 
 Responsive layout techniques in Flutter
 
-**External Resources Used** that were used for my learning:
+-----------------------------------------------------------------------------
+**External Resources Used** 
+that were used for my learning:
+
+
 Flutter Image Widget Documentation
 Helped me display online images using Image.network() from AWS S3.
 
@@ -33,6 +37,8 @@ Used to upload images to the cloud and retrieve their public URLs.
 
 Flutter Web Deployment Guide
 Helped me deploy the project to GitHub Pages after building it for web.
+
+----------------------------------------------------------------------------------------
 
 **My Original Work Includes:**
 
@@ -50,7 +56,7 @@ Helped me deploy the project to GitHub Pages after building it for web.
 
 7. Full documentation including README, folder structure, and run instructions
 
-
+-----------------------------------
 # Digital Framework
 
 A **Flutter-based digital picture frame** application that displays images (stored in AWS Cloud Storage) on a rotating cycle.  
@@ -102,6 +108,7 @@ README.md     → Project documentation
 Computer Programming Student | Sault College, Toronto Campus
 
 GitHub: https://github.com/ekjotkaursault
+
 
 
 

@@ -1,6 +1,8 @@
 **This is to view my 'digital_framework' directly on your browser:**
 
-[🔗 Live Demo — Click Here to View the App](https://ekjotkaursault.github.io/digital_framework/)
+[Live Demo — Click Here to View the App](https://ekjotkaursault.github.io/digital_framework/)
+
+This is fully responsive web page with pause and resume buttons and 4 images that are being displayed on a rotating cycle, which works very smoothly.
 
 # Digital Framework
 
@@ -51,3 +53,4 @@ README.md     → Project documentation
 Ekjot Kaur
 Computer Programming Student | Sault College, Toronto Campus
 GitHub: https://github.com/ekjotkaursault
+

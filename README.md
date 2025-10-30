@@ -23,19 +23,19 @@ Responsive layout techniques in Flutter
 that were used for my learning:
 
 
-Flutter Image Widget Documentation
+**Flutter Image Widget Documentation** https://api.flutter.dev/flutter/widgets/Image-class.html
 Helped me display online images using Image.network() from AWS S3.
 
-Flutter Timer Class
+**Flutter Timer Class**  https://api.flutter.dev/flutter/dart-async/Timer-class.html
 Guided the implementation of automatic image transitions every 10 seconds using Timer.periodic().
 
-Flutter Layout and Responsiveness Guides
+**Flutter Layout and Responsiveness Guides**  https://docs.flutter.dev/development/ui/layout
 Provided best practices for building responsive UI using MediaQuery, Expanded, and Flexible widgets.
 
-AWS S3 Documentation
+**AWS S3 Documentation**  https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html
 Used to upload images to the cloud and retrieve their public URLs.
 
-Flutter Web Deployment Guide
+**Flutter Web Deployment Guide** https://docs.flutter.dev/deployment/web
 Helped me deploy the project to GitHub Pages after building it for web.
 
 ----------------------------------------------------------------------------------------
@@ -108,6 +108,7 @@ README.md     → Project documentation
 Computer Programming Student | Sault College, Toronto Campus
 
 GitHub: https://github.com/ekjotkaursault
+
 
 
 

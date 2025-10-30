@@ -7,6 +7,7 @@ This is fully responsive web page with pause and resume buttons and 4 images tha
 ------------------------------------------
 
 **Code Attribution**
+
 This project was designed and developed by me (Ekjot Kaur) as part of my exploration of Flutter’s web development capabilities.
 While the overall structure, logic, and design are original, I referenced a few official and educational resources to understand:
 
@@ -113,6 +114,7 @@ README.md     → Project documentation
 Computer Programming Student | Sault College, Toronto Campus
 
 GitHub: https://github.com/ekjotkaursault
+
 
 
 

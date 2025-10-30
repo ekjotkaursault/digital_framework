@@ -1,14 +1,28 @@
+<!-- 
+  Digital Picture Frame 
+  Author: Ekjot Kaur
+  Description: A responsive web app that displays 4 rotating images 
+  (from AWS S3) with pause and resume functionality.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Ensures proper scaling on mobile and tablet -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Digital Picture Frame</title>
+
+  <!-- ===================== CSS Styling ===================== -->
   <style>
+    /* Universal reset to include padding and borders in total width/height */
     * {
       box-sizing: border-box;
     }
 
+    /* Page layout and overall look */
     body {
       background-color: #f2f2f2;
       font-family: 'Poppins', sans-serif;
@@ -21,6 +35,7 @@
       padding: 20px;
     }
 
+    /* Main heading style */
     h1 {
       margin-bottom: 20px;
       color: #222;
@@ -29,6 +44,7 @@
       font-size: 2rem;
     }
 
+    /* Outer frame styling for the image container */
     .frame {
       border: 10px solid #4A90E2;
       border-radius: 20px;
@@ -37,12 +53,13 @@
       background-color: white;
       width: 90%;
       max-width: 600px;
-      aspect-ratio: 3 / 2; /* Ensures consistent ratio */
+      aspect-ratio: 3 / 2; /* Keeps image proportions consistent */
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
+    /* Image styling to fit the frame */
     .frame img {
       width: 100%;
       height: 100%;
@@ -50,6 +67,7 @@
       border-radius: 12px;
     }
 
+    /* Container for buttons */
     .buttons {
       margin-top: 25px;
       display: flex;
@@ -58,6 +76,7 @@
       justify-content: center;
     }
 
+    /* Button styling */
     .buttons button {
       background-color: #4A90E2;
       color: white;
@@ -70,16 +89,18 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
+    /* Hover effect for buttons */
     .buttons button:hover {
       background-color: #3b7dc4;
       transform: translateY(-2px);
     }
 
+    /* Click animation */
     .buttons button:active {
       transform: scale(0.97);
     }
 
-    /* ✅ Responsive Buttons */
+    /* Responsive adjustments for small screens */
     @media (max-width: 480px) {
       h1 {
         font-size: 1.6rem;
@@ -93,20 +114,28 @@
     }
   </style>
 </head>
+
 <body>
 
-  <h1> Digital Picture Frame</h1>
+  <!-- ===================== Webpage Content ===================== -->
 
+  <!-- Page Title -->
+  <h1>Digital Picture Frame</h1>
+
+  <!-- Frame that holds the rotating images -->
   <div class="frame">
     <img id="displayedImage" src="" alt="Slideshow Image">
   </div>
 
+  <!-- Pause and Resume controls -->
   <div class="buttons">
     <button onclick="pauseSlideshow()">Pause</button>
     <button onclick="resumeSlideshow()">Resume</button>
   </div>
 
+  <!-- ===================== JavaScript Functionality ===================== -->
   <script>
+    // Array holding image URLs from AWS Cloud Storage
     const imageUrls = [
       "https://ekjot-lab3-assets.s3.ca-central-1.amazonaws.com/snow.jpg",
       "https://ekjot-lab3-assets.s3.ca-central-1.amazonaws.com/foreign.jpg",
@@ -114,33 +143,43 @@
       "https://ekjot-lab3-assets.s3.ca-central-1.amazonaws.com/table_chair.jpg"
     ];
 
+    // Keeps track of the currently displayed image
     let currentIndex = 0;
+
+    // Used to store the interval timer reference
     let slideshowInterval;
+
+    // Reference to the <img> tag where images will be displayed
     const displayedImage = document.getElementById("displayedImage");
 
+    // Function to show the image at a specific index
     function showImage(index) {
       displayedImage.src = imageUrls[index];
     }
 
+    // Moves to the next image in the array (loops back to first image)
     function nextImage() {
       currentIndex = (currentIndex + 1) % imageUrls.length;
       showImage(currentIndex);
     }
 
+    // Starts automatic slideshow (image changes every 5 seconds)
     function startSlideshow() {
       slideshowInterval = setInterval(nextImage, 5000);
     }
 
+    // Pauses the slideshow by clearing the interval
     function pauseSlideshow() {
       clearInterval(slideshowInterval);
     }
 
+    // Resumes slideshow by restarting interval
     function resumeSlideshow() {
       pauseSlideshow();
       startSlideshow();
     }
 
-    // Initial load
+    // Initial setup: show the first image and start the slideshow
     showImage(currentIndex);
     startSlideshow();
   </script>

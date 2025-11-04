@@ -22,7 +22,7 @@ Responsive layout techniques in Flutter
 -----------------------------------------------------------------------------
 **External Resources Used** 
 that were used for my learning, I didnot copy and paste the code, instead i used them for my understanding and learning.
-These are the websites which enhanced my knowledge of **Flutter with usage of AWS as a bucket storage.**
+These are the websites which enhanced my knowledge of **Flutter with usage of AWS as a bucket storage.** But as Flutter was a new subject, sometimes i utilised in-built copilot to find out errors and missing code.
 
 
 **Flutter Image Widget Documentation** https://api.flutter.dev/flutter/widgets/Image-class.html 
@@ -115,6 +115,7 @@ README.md     → Project documentation
 Computer Programming Student | Sault College, Toronto Campus
 
 GitHub: https://github.com/ekjotkaursault
+
 
 
 
